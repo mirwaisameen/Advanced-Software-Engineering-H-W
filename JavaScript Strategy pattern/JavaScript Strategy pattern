@@ -13,24 +13,24 @@ Shipping.prototype = {
     }
 };
 
-var UPS = function () {
+var mirtransport = function () {
     this.calculate = function (package) {
         // calculations...
-        return "$45.95";
+        return "$50.95";
     }
 };
 
-var USPS = function () {
+var ahmbabtransport = function () {
     this.calculate = function (package) {
         // calculations...
-        return "$39.40";
+        return "$45.40";
     }
 };
 
-var Fedex = function () {
+var alsadattransprot = function () {
     this.calculate = function (package) {
         // calculations...
-        return "$43.20";
+        return "$35.20";
     }
 };
 
@@ -40,16 +40,17 @@ function run() {
 
     // the 3 strategies
 
-    var ups = new UPS();
-    var usps = new USPS();
-    var fedex = new Fedex();
+    var ups = new mirtransport();
+    var usps = new ahmbabtransport();
+    var fedex = new alsadattransprot();
 
     var shipping = new Shipping();
 
-    shipping.setStrategy(ups);
-    console.log("UPS Strategy: " + shipping.calculate(package));
-    shipping.setStrategy(usps);
-    console.log("USPS Strategy: " + shipping.calculate(package));
-    shipping.setStrategy(fedex);
-    console.log("Fedex Strategy: " + shipping.calculate(package));
+    shipping.setStrategy(mirtransports);
+    console.log("mirtransports: " + shipping.calculate(package));
+    shipping.setStrategy(ahmbabtransport);
+    console.log("ahmbabtransport: " + shipping.calculate(package));
+    shipping.setStrategy(alsadattransprot);
+    console.log("alsadattransprot: " + shipping.calculate(package));
 }
+
