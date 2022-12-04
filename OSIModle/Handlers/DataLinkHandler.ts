@@ -1,8 +1,8 @@
 import IHandler from "../interfaces/IHandler";
 import Request from "../Request/Request";
-import BaseHandler from "./BaseHandler";
+import Base from "./Base";
 
-class DataLinkHandler extends BaseHandler {
+class DataLink extends Base {
   public handle(request: string[]) {
     console.log("data link");
 
@@ -20,4 +20,4 @@ class DataLinkHandler extends BaseHandler {
   }
 }
 
-export default DataLinkHandler;
+export default DataLink;

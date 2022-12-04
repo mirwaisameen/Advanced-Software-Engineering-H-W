@@ -2,7 +2,7 @@ import IHandler from "../interfaces/IHandler";
 import Request from "../Request/Request";
 import BaseHandler from "./BaseHandler";
 
-class ApplicationHandler extends BaseHandler {
+class Application extends BaseHandler {
   public handle(request: string[]) {
     console.log("app");
 
@@ -20,4 +20,4 @@ class ApplicationHandler extends BaseHandler {
   }
 }
 
-export default ApplicationHandler;
+export default Application;

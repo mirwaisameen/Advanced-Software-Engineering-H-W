@@ -1,8 +1,8 @@
 import IHandler from "../interfaces/IHandler";
 import Request from "../Request/Request";
-import BaseHandler from "./BaseHandler";
+import Base from "./Base";
 
-class PresentationHandler extends BaseHandler {
+class Presentation extends Base{
   public handle(request: string[]) {
     console.log("presentation");
 
@@ -20,4 +20,4 @@ class PresentationHandler extends BaseHandler {
   }
 }
 
-export default PresentationHandler;
+export default Presentation;

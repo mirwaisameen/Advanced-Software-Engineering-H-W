@@ -1,10 +1,10 @@
-import ApplicationHandler from "./Handlers/ApplicationHandler";
-import DataLinkHandler from "./Handlers/DataLinkHandler";
-import NetworkHandler from "./Handlers/NetworkHandler";
-import PhysicalHandler from "./Handlers/PhysicalHandler";
-import PresentationHandler from "./Handlers/PresentationHandler";
-import SessionHandler from "./Handlers/SessionHandler";
-import TransportHandler from "./Handlers/TransportHandler";
+import ApplicationHandler from "./Handlers/Application";
+import DataLinkHandler from "./Handlers/DataLink";
+import NetworkHandler from "./Handlers/Network";
+import PhysicalHandler from "./Handlers/Physical";
+import PresentationHandler from "./Handlers/Presentation";
+import SessionHandler from "./Handlers/Session";
+import TransportHandler from "./Handlers/Transport";
 import Request from "./Request/Request";
 
 export const encode = () => {
@@ -18,13 +18,13 @@ export const encode = () => {
     "physical",
   ];
 
-  const application = new ApplicationHandler();
-  const presentation = new PresentationHandler();
-  const session = new SessionHandler();
-  const transport = new TransportHandler();
-  const network = new NetworkHandler();
-  const dataLink = new DataLinkHandler();
-  const physical = new PhysicalHandler();
+  const application = new Application();
+  const presentation = new Presentation();
+  const session = new Session();
+  const transport = new Transport();
+  const network = new Network();
+  const dataLink = new DataLinkr();
+  const physical = new Physical();
 
   application
     .setNext(presentation)
@@ -41,13 +41,13 @@ export const encode = () => {
 export const decode = () => {
   const request =
     "application,presentation,session,transport,network,dataLink,physical";
-  const application = new ApplicationHandler();
-  const presentation = new PresentationHandler();
-  const session = new SessionHandler();
-  const transport = new TransportHandler();
-  const network = new NetworkHandler();
-  const dataLink = new DataLinkHandler();
-  const physical = new PhysicalHandler();
+  const application = new Application();
+  const presentation = new Presentation();
+  const session = new Session();
+  const transport = new Transport();
+  const network = new Network();
+  const dataLink = new DataLink();
+  const physical = new Physical();
 
   physical
     .setNext(dataLink)

@@ -1,15 +1,12 @@
 import IHandler from "../interfaces/IHandler";
 
-class BaseHandler implements IHandler {
+class Base implements IHandler {
   protected nextHandler: IHandler;
   message: string = "";
   requestType: string;
 
   public setNext(handler: IHandler): IHandler {
     this.nextHandler = handler;
-    // Returning a handler from here will let us link handlers in a
-    // convenient way like this:
-    // monkey.setNext(squirrel).setNext(dog);
     return handler;
   }
 
@@ -21,4 +18,4 @@ class BaseHandler implements IHandler {
   }
 }
 
-export default BaseHandler;
+export default Base;

@@ -1,8 +1,8 @@
 import IHandler from "../interfaces/IHandler";
 import Request from "../Request/Request";
-import BaseHandler from "./BaseHandler";
+import Base from "./Base";
 
-class PhysicalHandler extends BaseHandler {
+class Physical extends Base{
   public handle(request: string[]) {
     console.log("Physical");
 
@@ -21,4 +21,4 @@ class PhysicalHandler extends BaseHandler {
   }
 }
 
-export default PhysicalHandler;
+export default Physical;

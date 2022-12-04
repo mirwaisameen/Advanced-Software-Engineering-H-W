@@ -1,8 +1,8 @@
 import IHandler from "../interfaces/IHandler";
 import Request from "../Request/Request";
-import BaseHandler from "./BaseHandler";
+import Base from "./Base";
 
-class TransportHandler extends BaseHandler {
+class Transport extends Base {
   public handle(request: string[]) {
     console.log("Transport");
 
@@ -20,4 +20,4 @@ class TransportHandler extends BaseHandler {
   }
 }
 
-export default TransportHandler;
+export default Transport;

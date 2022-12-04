@@ -1,8 +1,8 @@
 import IHandler from "../interfaces/IHandler";
 import Request from "../Request/Request";
-import BaseHandler from "./BaseHandler";
+import Base from "./Base";
 
-class NetworkHandler extends BaseHandler {
+class Network extends Base {
   public handle(request: string[]) {
     console.log("Network");
 
@@ -20,4 +20,4 @@ class NetworkHandler extends BaseHandler {
   }
 }
 
-export default NetworkHandler;
+export default Network;

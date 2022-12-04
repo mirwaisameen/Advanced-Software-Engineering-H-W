@@ -1,8 +1,8 @@
 import IHandler from "../interfaces/IHandler";
 import Request from "../Request/Request";
-import BaseHandler from "./BaseHandler";
+import Base from "./Base";
 
-class SessionHandler extends BaseHandler {
+class Session extends Base {
   public handle(request: string[]) {
     console.log("session");
 
@@ -21,4 +21,4 @@ class SessionHandler extends BaseHandler {
   }
 }
 
-export default SessionHandler;
+export default Session;
