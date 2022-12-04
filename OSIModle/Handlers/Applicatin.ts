@@ -1,6 +1,6 @@
 import IHandler from "../interfaces/IHandler";
 import Request from "../Request/Request";
-import BaseHandler from "./BaseHandler";
+import BaseHandler from "./Base";
 
 class Application extends BaseHandler {
   public handle(request: string[]) {
